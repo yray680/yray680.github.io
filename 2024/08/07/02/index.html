@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yray680&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      语音学02 | Hexo
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Hexo</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>语音学02</h2>
+  <p class="post-date">2024-08-07</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>02.mp4_导读<br>2024年07月19日 18:36<br>关键词<br>ipa、听写、kk、元音、辅音、转写、拼写、声音、鼻音、口腔、语境、发音、符号、未释放、发声、舌头、发音、母亲、抚养、儿童<br>全文摘要<br>在这一课堂环境中，教师引导学生进行每周一次的听写练习，旨在通过国际音标（IPA）提高他们对英语发音的掌握。教师强调元音质量、持续时间以及释放停顿和未释放停顿之间的区别，并敦促学生仔细观察教师的面部表情，以获得更多的理解线索。提交作业后，学生会收到反馈，主要是纠正与发声、未释放停顿和遵守 IPA 指南有关的不准确之处。这一过程强调了反复练习和纠正反馈对提高发音技能的内在教学价值。此外，对话还揭示了语境在语言解释中的关键作用，并用实例说明了在没有足够语境线索的情况下可能出现的误解。教师分享了个人教学经验，主张从学生的错误中学习，从而改进教学方法。此外，对话还涉及语音发音和声学的复杂性，介绍了 “回声法 “等改善听力和发音的工具。对话还讨论了非母语环境中元音发音的复杂性，最后回顾了本节课的要点并提出了进一步阅读的建议，从而强化了有效语言教学的多面性。<br>章节速览<br>00:00 通过听写学习英语发音<br>对话描述了在课堂上，教师向学生介绍每周一次的听写练习，目的是提高学生对使用国际音标（IPA）的英语发音的理解。教师教导学生密切注意元音质量、元音长度和尾音，并鼓励学生观察教师的面部手势，以获得更多提示。教师对每个学生提交的材料进行点评，重点关注与未释放的停顿、发声和正确使用 IPA 有关的错误，强调练习和纠正对提高发音技能的重要性。<br>18:49 探讨语境对英语学习的重要性<br>本次讨论着重强调了语境在英语学习中的重要性。通过分析特定例句，如“妈妈和孩子赛跑”的正确理解方式，指出学生在没有足够的上下文信息时可能会对词汇或句子产生误解。此外，教师分享了自己的教学经验，强调了通过学生的错误来学习和改善教学方法的价值，并提醒学生们在阅读时要注意细节，例如章节编号和标题，以提高理解和学习效率。<br>23:31 语言学习中的发音与声学<br>对话的重点是发音和声学在描述语音和改善发音方面的重要性。对话解释了发音（声道中各部分的运动）和声学（物理学中对声音的研究）之间的区别，强调了它们在语言教学中的重要性。主讲人介绍了提高听力和发音技能的 “回声法”，强调了该方法在准确捕捉和再现声音方面的有效性。此外，他还提到了未释放辅音的概念，强调了元音发音所面临的挑战，尤其是在台湾等东亚地区。本课最后概述了所涉及的主题，并提示了进一步的阅读材料。<br>36:25 了解语音学：声音、语音和技术<br>对话介绍了发音的概念及其在语音学中的重要性，探讨了产生语言声音所涉及的物理动作。对话讨论了研究语音学的各种动机，包括不同语言的声音多样性和语言病理学面临的挑战。此外，还讨论了口音和技术对语音生成和感知的影响，强调了语调的复杂性和改进计算机生成语音的努力。叙述强调了密切关注章节标题对有效学习的重要意义。<br>50:54 通过重音和动作改善英语发音<br>对话的重点是英语发音中正确重音和动作的重要性，强调舌头和嘴唇的作用。对话强调了台湾学习者常犯的错误，并指导如何通过练习和对语音细微差别的认识，实现清晰、准确的发音。<br>59:28 演讲的效率：手势与声音<br>这本书解释了人类如何利用舌头和嘴唇的运动通过语言有效地传递信息，强调了正确发音的重要性和手势在提高清晰度方面的作用。它还讨论了语音产生的能量来源以及有声和无声之间的区别。<br>要点回顾<br>发言人要进行什么样的听写？<br>发言人将进行一个非常简单的听写，涉及十个单音节短英语单词，重点是 IPA 符号。<br>听写过程中需要 “注意 “哪些具体方面？<br>在听写过程中，主讲人指出了学生需要注意的两个关键要素：元音质量和长度以及韵尾。<br>面部手势在理解听写内容方面起什么作用？<br>主讲人强调，学生在听写过程中应注意观察教师的嘴部动作，以获得听力以外的额外信息，因为面部手势可以提供线索。<br>在听写过程中，发言人为什么要重复某些单词？<br>在听写过程中，主讲人会重复某些单词，让学生练习正确书写。<br>听写的奖励句子是什么？<br>听写的奖励句子是 “听着，看着。母亲养育了她的孩子们。学生们被要求在试卷上用常规拼写而不是 IPA 符号书写这个句子。<br>发言人计划如何评估和纠正听写练习？<br>听写结束后，学生要检查自己的作业，与教师的范例进行比较，并交换试卷进行评价和改正，每个单词 10 分，拼写和 IPA 准确性各占一半。<br>演讲者对听写学习提出了哪些建议？<br>主讲人建议学生从每一次听写中学习，无论最初犯了什么错误，都要提高对声音的敏感度。<br>老师为什么要澄清未释放句号的概念？<br>教师澄清了 “未放音停顿 “的概念，解释说英语中的 “back “和 “bath “等音发起来并不像 “back “和 “bath “那样带着 “呼哧呼哧 “的气，强调未放音停顿在脱离语境的情况下更难识别。<br>学生应如何加深对有声和无声发音的理解？<br>学生应通过听写提高对有声和无声发音的理解，并培养即使发音本身不清楚也能辨别其区别的能力，例如区分 “AT “和 “AK”。<br>有多少学生写出了与给定提示不同的答案？<br>三名学生根据提示写出了不同的答案。<br>RA “和 “ACE “的正确答案是什么？<br>RA “拼写为 “R”、”A”、”C”、”E”、”D”。ACE “拼写为 “A”、”C”、”E”、”D”。<br>哪句话表明理解英语要依靠上下文，而不是听特定的声音？<br>证明依赖上下文的句子是 “你们几乎都误入歧途 妈妈和孩子赛跑。<br>发言人认为在语言学习中使用语境有什么重要意义？<br>这位发言者强调了在语言学习中使用语境的重要性，尽管他的母语是英语，但语境对于理解所要表达的意思至关重要，这个例子就证明了这一点。<br>如何通过演讲者提到的回声法提高学生的英语口语能力？<br>学生可以通过练习回声法来提高英语口语技能，即在听到说话者说话后，在脑中听到回声后再重复一遍。这有助于内化和准确再现目标语言的声音。<br>语音学中的 “发音 “是指什么？<br>在语音学中，”发音 “一词指的是声道各部分通过关节连接在一起的运动，从而发出语言中的声音。<br>发言人如何强调元音在英语和东亚普通话中的重要性？<br>这位发言者强调，元音对东亚地区讲英语和普通话的人来说尤其具有挑战性，他说，在整个东亚地区，正确使用元音尤其成问题。<br>根据讲座内容，个人为什么想要描述人类语言的声音？<br>个人可能出于各种原因想要描述人类语言的声音，包括对不同语言中的各种声音及其独特特征感到好奇。<br>病态言语 “的概念是什么，为什么要研究它？<br>病态言语是指由于腭裂等疾病而导致的言语偏离标准言语的现象。研究病态言语有助于了解言语问题，并制定方法帮助那些在言语方面有困难的人，如听力困难的儿童或有言语障碍的成年人。<br>除了描述语音之外，语音学还有哪些应用？<br>语音学的应用包括辅助病理语音、教授特定口音，以及改进计算机语音识别，使其更自然、更易懂，尽管实现这一点仍是一项挑战。<br>人们为什么要利用语音学改变口音，以达到表演或文化融合的目的？<br>人们利用语音学来改变口音，以达到表演、文化融合或避免口音歧视的目的，因为模仿某些口音的能力可能会影响到某些社会或职业团体的接纳程度。<br>情感如何影响我们对重音的感知？<br>情感在人们如何看待口音方面起着重要作用，不同的口音会引起共同的情感反应。这可能会导致负面的刻板印象或判断，个人可能会采用不那么受鄙视的口音来避免这些反应或更好地融入社区。<br>人类对于声音差异有多敏感？<br>人类非常敏感于声音差异，而计算机在这方面表现不佳。<br>为什么需要重视章节标题和段落标题？<br>因为如果读者不关注章节标题，即使学完整个章节也可能不了解其主题。同样地，段落标题能帮助理解和回顾内容中可能未完全理解的部分。<br>语音生产中强调哪些方面的重要性？<br>在语音产生过程中，正确发音并理解词性和复合词的使用非常重要，避免过度兴奋的声音效果，并学会如何将一些词汇降调以消除语速过快导致的信息丢失问题。<br>如何进行非重读（unstressed）音节的发音练习？<br>要发出非重读音节，应降低声音，保持低平的音调，例如，说“speech production”时听起来要像是一个连贯无间断的概念，而非一个需要特别强调的主题。<br>什么是语音产生的两个主要运动部分？<br>在描述语言声音时，主要使用的两个运动部分是舌头和嘴唇，这两种运动方式是最常被用来解释语言声音产生的过程。<br>根据演讲者的说法，一个完整的思考结束时会发生什么？<br>在一个完整的思维结束时，语调会下降。<br>演讲者如何强调语句中的最后一个音节或字符？<br>为了强调语句中的最后一个音节或字符，说话者会提高音调，即所谓的 “续升”。<br>大声说话时，哪些肢体动作有助于传递信息？<br>在大声讲话时，舌头和嘴唇的动作等肢体动作要清晰可闻，以确保听众能够听懂。<br>为什么使用唇舌运动是一种有效的说话方式？<br>使用嘴唇和舌头的动作被认为是高效的说话方式，因为它可以让说话者在交流时无需停止其他工作，而不像使用手语那样需要将手放在一边。<br>X 射线电影揭示了语言发音的哪些方面？<br>X 射线电影展示了舌头和嘴唇在形成特定英语发音时的快速运动。<br>过去，研究人员使用哪种技术捕捉人的嘴部动作进行语音分析？<br>研究人员使用 X 射线捕捉人类说话时的嘴部运动图像，甚至冒着可能伤害受试者的风险。<br>演讲者认为，演讲的主要能量来源是什么？<br>语言产生的主要能量来源是呼吸系统。</p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2024/07/23/text-1/">
+        <span class="nav-arrow">← </span>
+        
+          语音学01
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2024/08/07/03/">
+        
+          语音学03
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="nav">none</ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2024/08/07/02/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2024 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>

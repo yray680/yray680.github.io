@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yray680&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      语音学03 | Hexo
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Hexo</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>语音学03</h2>
+  <p class="post-date">2024-08-07</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>03发音太重要了语调.mp4_导读<br>2024年07月31日 09:12<br>关键词<br>口音, 方言, 佛罗里达州, 语调, 普通话, 新英格兰, 标点符号, 奴隶制, 南方口音, 时间, 韵律重音, 声带, 重音, 音节时间, 内容词, 语法, 英语, 停顿, 韵母, 声母<br>全文摘要<br>对话探讨了美国各地受历史定居模式、移民和气候影响而产生的丰富多彩的方言。对话强调了这些方言之间的互通性，并突出了特定地区随着时间推移发生的语言变化。对话转向教授英语发音的基本方面，重点是声道的各个部分和语调的重要性。其中包括空气从肺部经过咽部到达喉部的过程，说明了 “气管 “等术语的重要性以及重音时间和音节时间的区别。讨论延伸到语音学，涉及重音模式、音节结构和发音，旨在引导学习者通过对发音和语调的细致关注来形成标准的方言。此外，对话还涉及语音的生物学基础，从声带的作用到声道的复杂解剖。通过了解这些机制，学习者可以提高自己的口语技能，体会人类交流的复杂性。此外，该书还深入探讨了更广泛的话题，如嗓音健康、面临发声挑战的演讲者的适应性以及在娱乐中创造独特的声音。通过将理论知识与实际应用相结合，该书的全面论述有助于个人提高嗓音和演讲能力。<br>章节速览<br>00:00 美国各地的方言差异<br>对话探讨了美国的各种方言，重点介绍了从新英格兰、南部到得克萨斯州的地区口音。对话讨论了历史定居模式、移民和气候等因素如何影响语言的发展。此外，对话还涉及不同方言之间的相互理解，以及特定地区随着时间推移发生的语言变化。<br>10:08 了解英语语调和发音<br>对话的重点是教授声道的不同部分以及英语语调的重要性。对话解释了空气如何从肺部通过咽部进入喉部，强调了 “气管 “等术语的正确发音。主讲人深入探讨了重音和续音的概念，说明了标点符号如何表示音调和音量的变化。还讨论了重音时间与音节时间的关系，强调了英语与法语等语言相比独特的重音模式。目的是通过关注发音细节和语调模式，帮助学习者形成连贯的方言。<br>20:19 英语语音学入门：重音、音节和元音<br>本对话概述了英语语音学，强调重音模式、音节结构以及有声和无声之间的区别。内容包括口语的节奏、重读音节与非重读音节的长度以及语调在表达意思方面的重要性。此外，它还涉及语音产生的物理方面，包括声带、声带皱褶的作用以及声道的各种解剖特征。该书旨在帮助学习者了解英语发音的机制，并通过实例和练习鼓励学习者积极参与。<br>36:52 探索喉与发音：从鼻腔到舌头<br>本次讲解重点关注了人类语音产生的生理结构，从鼻腔、声带、到舌头的各个部分，以及它们如何协同工作产生我们能够听见的声音。首先，讲解者解释了鼻腔和其内含的海绵组织对于声音传播的影响，强调了这一区域在改变音质上的特殊作用。随后，话题转移到了位于口腔后的软腭上，亦称小舌，此处在语言发音中起到了关键支撑作用。通过详细说明舌头的不同区域——包括舌尖、舌侧和舌根，讲解者揭示了舌头是如何塑造不同音素的。此外，还提到了食管和会厌软骨等其他参与消化和保护呼吸道的结构，尽管它们主要不参与到语言产生中。整个讨论旨在帮助理解人类语音背后的生物学原理，并鼓励学习者积极探索语音学的更多知识。<br>50:06 了解人类发声系统：从解剖到功能<br>对话深入浅出地讲解了人类的发声系统，从喉头、声带和会厌等解剖结构到发声的生理过程。它涵盖了语音学的基础知识，包括发声和不发声，并通过实例和慢动作视频演示了发声过程。此外，它还涉及正确护嗓的重要性以及某些习惯对嗓音健康的影响。<br>01:05:01 探索声音和语言：从漫画到癌症<br>对话涉及与嗓音和语言有关的各种话题，包括梅尔-布朗创作的卡通片中的独特嗓音、喉癌对语言产生的影响，以及没有声带的人说话的替代方法。对话强调了人类嗓音的迷人多样性，以及个人适应交流能力重大变化的韧性。<br>01:12:47 语音学基础与练习<br>本次课程重点讲解了语音学的基本概念、发音规则及练习方法。首先，明确了欧语和服务号在发音上的区别，并强调了正确使用发音符号的重要性。接着，通过实际例子和对比，详细讲述了元音和辅音的发音特点，特别是voiced和voiceless音素的区别。此外，还涉及到了如何通过感觉喉咙振动来辨别不同的发音方式，以及骨传导对声音响度的影响。课程最后布置了相关的阅读和实践作业，包括理解和绘制头部发音器官图，以加深学生对所学知识的理解和掌握。<br>要点回顾<br>美国哪些地区的口音往往不同于 “普通美国人”？<br>与 “普通美国人 “口音不同的地区包括新英格兰的东海岸和从马里兰州一直延伸到佛罗里达州的南部各地。<br>在南方各州中，佛罗里达州的口音有何独特之处？<br>在南方各州中，佛罗里达州是独一无二的，因为这里有大量的非本地居民，他们中的许多人在退休后因温暖晴朗的天气而从寒冷的北方各州移居到佛罗里达州，从而形成了混合口音。<br>为什么佛罗里达州和整个南部地区会有各种不同的南方口音？<br>佛罗里达州和整个南部地区有各种不同的南方口音，这是因为该地区横跨许多不同的州，随着时间的推移，移民和时间等因素导致出现了不同的语言和方言。<br>为什么与美国其他地区相比，新英格兰和南部各州的口音各不相同？<br>与美国其他地区相比，新英格兰和南部各州的口音多种多样，这是因为这些地区定居较早，方言发展的时间较长，而中西部和西部等其他地区开放较晚，导致语言景观不够单一。<br>是什么决定了包括方言在内的不同语言种类的发展？<br>不同语言品种（包括方言）的发展是由各种因素决定的，如与世隔绝和不同移民群体的影响，这些因素都会随着时间的推移改变方言。<br>台湾和中国大陆的普通话方言之间是否可以相互理解？<br>是的，台湾和中国大陆的普通话方言之间可以相互理解。虽然在发音和词汇方面存在相当大的差异，但两个地区的人都能相当容易地相互理解。<br>时间如何影响美国国内方言的发展？<br>时间在很大程度上影响了美国国内方言的发展，因为较早定居的地区，如新英格兰和南部各州，有较长的时间来发展和保持独特的口音。另一方面，定居较晚的地区方言多样性较少。<br>定居时间的差异如何导致美国的方言差异？<br>定居时间的不同造成了美国方言的差异，因为较早定居的地区有更多的时间让方言进化和多样化，而较晚定居的地区语言环境单一化，导致方言差异较小。<br>标点符号在口语中起什么作用？<br>标点符号为说话者提供重要信息，显示音调、音量和情感的变化。<br>为什么学生在阅读时要避免飞快地阅读课文？<br>学生不应争分夺秒地阅读课文，因为这表明他们缺乏对正确发音和节奏的重视，包括对与标点符号相关的停顿、重音、续起和终落模式的理解。<br>歌词 “和 “喉咙 “的发音有什么区别？<br>虽然两种发音都是正确的，但强调 “歌词 “是为了保持方言的一致性，避免对发音的个人理解。<br>学生应如何处理与标点符号相关的停顿和重音？<br>与功能词相比，内容词（尤其是单音节词）的语义量更大，因此学生在用完内容词后应停顿一下。此外，他们还应该注意重音时间的选择（这会影响音节长度），并练习在短语中连接音节。<br>区分重读音节和非重读音节有什么重要意义？<br>区分重读音节和非重读音节非常重要，因为这反映了语言的节奏，重读音节比非重读音节长。它还会影响句子的时间和整体发音。<br>演讲者是如何阐述在某些情况下停顿的必要性的？<br>演讲者强调了停顿在某些语境中的重要性，特别是在连续出现重音较强的内容词时，中间的间隔需要休息，以防止快速表达。<br>什么是 “声带 “和 “声褶”，它们在英语中是如何使用的？<br>在英语中，”Vocal folds “是指软腭，而 “vocal cords “则是传统术语。在本课中，教师将主要使用 “vocal folds”，因为它在英语中更为常见，但 “vocal cords “也并非不正确。<br>声带 “和 “声带 “如何表示元音和重音？<br>在 “声带褶皱 “中，组成 “falls “等单词时有一种特殊的重音模式，即 “vo “音和重读元音 “e”。教师提醒学生注意并根据 “声带褶皱 “的存在调整发音，因为 “声带褶皱 “会影响元音的发音和单词的重音位置。<br>声带振动对产生声音有何意义？<br>声带振动产生有声的声音，声带振动产生美妙的声音，与声带分离产生无声的声音形成鲜明对比，因此声带振动具有重要意义。教师会在整堂课中强调这种区别的重要性。<br>语调和舌头有什么区别？<br>录音记录中提到的音调和舌头是两个不同的概念。舌头指的是用来发出某些元音的物理器官，它会随着嘴的位置和发音而变化。而音调则是口语中的一个语音单位，以音高变化为特征，对于表达意思至关重要。<br>声道的哪个部分发出 “t”、”n “和 “s “音？<br>在汉语、英语和其他语言中，这些音（’t’、’n’和’s’）都是通过声道的一个特定部位发出的，这个部位被称为 “后鼻音区”，位于上齿的后面。<br>上牙后面的骨头在中文中是怎么说的？<br>在汉语中，上牙后面的骨头被称为 “shiying”，更常见的说法是 “chi yin”。<br>齿槽脊和山谷脊有什么区别，在英式英语中如何发音？<br>牙槽嵴是上颚切牙后面的突出骨头区域，在英式英语中的发音与美式英语不同。它在英式英语中通常被称为 “al viola alveolar”，而在美式英语中则被称为 “al villridge”。<br>软腭 “指的是什么，它与硬腭有什么区别？<br>软腭 “是指紧靠硬腭后面的腭部。它由软组织构成，与包含骨头的硬腭形成鲜明对比。软腭在口腔和鼻腔发音之间起着过渡作用，与硬腭相比具有明显的特征。<br>为什么在讨论声道时必须包括鼻腔？<br>在讨论声道时，必须考虑鼻腔，因为鼻腔内的海绵状组织会改变进入鼻腔的声音质量，从而产生特殊的音调。此外，在说话和鼻化过程中，它还是空气的通道，影响声音的整体产生。<br>悬雍垂（又称会厌）的功能是什么？<br>悬雍垂又称会厌，是位于舌根部的一个特殊器官。它的功能是在呼吸和说话时打开和关闭，让空气流通，同时在吞咽时覆盖住气管，保护气管不受食物和液体的影响。<br>什么是发声器官中的‘唇前点’？<br>‘唇前点’是指发音过程中与舌头接触的两个部分，这两个部位共同构成了发音体，即喉部和舌头下的软腭之间的区域。<br>如何将’唇前点’区域转化为描述性的词汇？<br>将’唇前点’区域转化为描述性词汇时，通常将其作为形容词使用，例如’forensic wall’, ‘foreign wall’, ‘ferrings noise’, ‘beautiful’, ‘perfect’等，并在指代特定结构时加上相应的名称，如ferrings日和furniture wall。<br>说话者的音节振动过程是如何发生的？<br>说话者通过打开并闭合喉部两侧肌肉（称为声带）来制造声音，这种动作会形成振动并产生音量。这种振动是在极短时间内发生的，大约每秒约200次，被称作赫兹（Hz）。声带的打开和关闭使得空气得以通过，形成发声的基本条件。同时，由于这些动作非常精细且协调，主要由无意识大脑控制，因此声音听起来平滑、均匀。<br>为什么过度使用或滥用嗓音会对声带造成伤害？<br>过度使用或滥用嗓音会导致声带长时间处于紧张状态，这不仅可能导致声音沙哑甚至失声，还会对声带造成损伤。例如，大声喊叫或持续唱歌等活动会使声带疲劳，需要适当休息以恢复其健康状态。此外，喝过多咖啡和浓茶也会因含有的氧化剂导致脱水，从而影响嗓音保护。<br>谁是负责许多著名卡通人物配音的主要配音员？<br>Mel Blanc是主要负责许多著名卡通人物配音的配音员。<br>Mel Blanc是如何通过改变声带来模拟不同角色的声音的？<br>Mel Blanc通过控制不同角色时声带的样子和开关动作来模仿他们的声音特征，这种技巧非常有趣。<br>完成作业要求包括哪些内容？<br>完成作业的要求包括查看并了解一些与声音有关的内容，特别是关注喉咙手术对说话的影响，并进行相关的听力练习和阅读理解。<br>Jack Klugman扮演的角色有哪些特点？<br>Jack Klugman曾因喉癌手术导致失去一片声带，仅剩一条声带或一个声带折叠物（vocal fold）。他在剧中饰演一位十分整洁、需要与极度混乱的人共同生活的喜剧角色。<br>如果一个人只有一片声带，他还能说话吗？<br>这是你的作业去探索的问题。研究表明即使只有一个声带也能正常说话，只是发音方式可能有所不同。<br>对于那些同时失去了两个声带的人来说会发生什么情况？<br>许多因为吸烟而患喉癌的人可能会被迫切除整个喉部，导致无法正常使用声带发声。<br>关于“音柱”手术后的生活状况，具体描述是什么样的？<br>患有喉癌的某位先生接受了手术，在其喉咙处留下了一个开放性的孔洞，类似口吃患者的情况。他使用一种特殊的设备将之套住，该设备可以帮助他在不依赖声带的情况下形成声音，甚至能讲授福建话和国语。<br>什么是ESOPHOS语音，以及如何实现这一方式？<br>ESOPHOS语音是一种通过食管而非声带发声的方式。当一个人失去声带时，可以通过训练学习使用这种方法，尽管听起来可能有些奇怪，但确实可以被理解和沟通。<br>为何在课堂上无法播放所有内容？<br>由于课堂时间有限，所以在课堂上无法播放所有的相关视频链接，但学生需要自行观看并参与其中的学习活动。<br>语音和无音的区别是什么？<br>语音（voiced）是指在发音时声带振动产生的声音，例如元音；而无音（voiceless）则是在发音时不使用声带振动的，如辅音。两者之间的区别对区分某些单词至关重要。</p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2024/08/07/02/">
+        <span class="nav-arrow">← </span>
+        
+          语音学02
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="nav">none</ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2024/08/07/03/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2024 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
